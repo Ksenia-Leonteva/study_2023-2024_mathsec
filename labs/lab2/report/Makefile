@@ -7,7 +7,19 @@ PDF_ENGINE =
 PDF_OPTIONS =
 FORMAT_OPTIONS =
 
+<<<<<<< HEAD
 FILTERS += -F pandoc-crossref
+=======
+### Cross references
+## Use pandoc-xnos (https://github.com/tomduck/pandoc-xnos)
+## Local pandoc-xnos
+FILTERS += --filter pandoc/filters/pandoc_fignos.py --filter pandoc/filters/pandoc_eqnos.py --filter pandoc/filters/pandoc_tablenos.py --filter pandoc/filters/pandoc_secnos.py
+## System-wide pandoc-xnos
+# FILTERS += --filter pandoc-fignos --filter pandoc-eqnos --filter pandoc-tablenos --filter pandoc-secnos
+## Use pandoc-crossref (https://github.com/lierdakil/pandoc-crossref)
+# FILTERS += --filter pandoc-crossref
+###
+>>>>>>> 71f447676e2b616ae0d334987b22d35fec7812b9
 PDF_ENGINE += --pdf-engine=lualatex --pdf-engine-opt=--shell-escape
 OPTIONS += --number-sections
 BIB_OPTIONS = --citeproc
